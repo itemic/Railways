@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4541C1C1255FD09F0064BC7F /* TimelineScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4541C1C0255FD09F0064BC7F /* TimelineScrollView.swift */; };
+		4541C1C6255FD3960064BC7F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4541C1C5255FD3960064BC7F /* MainView.swift */; };
+		4541C1CB255FD4630064BC7F /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4541C1CA255FD4630064BC7F /* TestView.swift */; };
 		457513C1255FC18600969898 /* ModeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457513C0255FC18600969898 /* ModeSelectionView.swift */; };
 		45C7005D25027E7B00C605E2 /* RailwaysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7005C25027E7B00C605E2 /* RailwaysApp.swift */; };
 		45C7005F25027E7B00C605E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7005E25027E7B00C605E2 /* ContentView.swift */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4541C1C0255FD09F0064BC7F /* TimelineScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineScrollView.swift; sourceTree = "<group>"; };
+		4541C1C5255FD3960064BC7F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		4541C1CA255FD4630064BC7F /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		457513C0255FC18600969898 /* ModeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSelectionView.swift; sourceTree = "<group>"; };
 		45C7005925027E7B00C605E2 /* Railways.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Railways.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45C7005C25027E7B00C605E2 /* RailwaysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailwaysApp.swift; sourceTree = "<group>"; };
@@ -100,6 +106,9 @@
 			children = (
 				45C7005C25027E7B00C605E2 /* RailwaysApp.swift */,
 				45C7005E25027E7B00C605E2 /* ContentView.swift */,
+				4541C1C5255FD3960064BC7F /* MainView.swift */,
+				4541C1CA255FD4630064BC7F /* TestView.swift */,
+				4541C1C0255FD09F0064BC7F /* TimelineScrollView.swift */,
 				457513C0255FC18600969898 /* ModeSelectionView.swift */,
 				45C7006025027E7C00C605E2 /* Assets.xcassets */,
 				45C7006525027E7C00C605E2 /* Info.plist */,
@@ -198,7 +207,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					45C7005825027E7B00C605E2 = {
 						CreatedOnToolsVersion = 12.0;
@@ -264,8 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4541C1CB255FD4630064BC7F /* TestView.swift in Sources */,
+				4541C1C1255FD09F0064BC7F /* TimelineScrollView.swift in Sources */,
 				457513C1255FC18600969898 /* ModeSelectionView.swift in Sources */,
 				45C7005F25027E7B00C605E2 /* ContentView.swift in Sources */,
+				4541C1C6255FD3960064BC7F /* MainView.swift in Sources */,
 				45C7005D25027E7B00C605E2 /* RailwaysApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,6 +435,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Railways/Railways.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Railways/Preview Content\"";
@@ -447,6 +460,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Railways/Railways.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Railways/Preview Content\"";

@@ -21,7 +21,7 @@ struct RailwaysApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(selected: $selected, sel2: $sel2)
+            ContentView(selected: $selected)
         }
     }
 }
