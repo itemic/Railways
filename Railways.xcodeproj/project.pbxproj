@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		457513C1255FC18600969898 /* ModeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457513C0255FC18600969898 /* ModeSelectionView.swift */; };
 		45C7005D25027E7B00C605E2 /* RailwaysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7005C25027E7B00C605E2 /* RailwaysApp.swift */; };
 		45C7005F25027E7B00C605E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7005E25027E7B00C605E2 /* ContentView.swift */; };
 		45C7006125027E7C00C605E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45C7006025027E7C00C605E2 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		457513C0255FC18600969898 /* ModeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSelectionView.swift; sourceTree = "<group>"; };
 		45C7005925027E7B00C605E2 /* Railways.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Railways.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45C7005C25027E7B00C605E2 /* RailwaysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailwaysApp.swift; sourceTree = "<group>"; };
 		45C7005E25027E7B00C605E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			children = (
 				45C7005C25027E7B00C605E2 /* RailwaysApp.swift */,
 				45C7005E25027E7B00C605E2 /* ContentView.swift */,
+				457513C0255FC18600969898 /* ModeSelectionView.swift */,
 				45C7006025027E7C00C605E2 /* Assets.xcassets */,
 				45C7006525027E7C00C605E2 /* Info.plist */,
 				45C7006625027E7C00C605E2 /* Railways.entitlements */,
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				457513C1255FC18600969898 /* ModeSelectionView.swift in Sources */,
 				45C7005F25027E7B00C605E2 /* ContentView.swift in Sources */,
 				45C7005D25027E7B00C605E2 /* RailwaysApp.swift in Sources */,
 			);
