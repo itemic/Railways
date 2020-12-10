@@ -61,7 +61,7 @@ struct ContentView: View {
                
             }.listStyle(SidebarListStyle())
             
-            MainView(selected: $selected, mode: $modeSelector)
+            MainView(selected: $selected, mode: $modeSelector, vm: viewModel)
         }
     }
 }

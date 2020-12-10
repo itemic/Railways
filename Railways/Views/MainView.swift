@@ -12,12 +12,13 @@ struct MainView: View {
     @Binding var mode: TransportMode
     @State var showPopover = false
     @State private var sortType = 0
+    @ObservedObject var vm: RoutesViewModel;
 
     
     var body: some View {
         VStack {
         switch mode {
-        case .BUS: BusView()
+        case .BUS: BusView(vm: vm)
         case .HSR: RailView()
         default: EmptyView()
         }
@@ -47,8 +48,9 @@ struct MainView: View {
     }
 }
 struct BusView: View {
+    @ObservedObject var vm: RoutesViewModel;
     var body: some View {
-        Text("BUS!")
+        Text(vm.stopOfRoutes.description)
     }
 }
 
@@ -88,11 +90,11 @@ struct RowView: View {
 }
 
 
-struct MainView_Previews: PreviewProvider {
-    @State static var selected: String? = "Nangang"
-    @State static var mode: TransportMode = .HSR
-
-    static var previews: some View {
-        MainView(selected: $selected, mode: $mode)
-    }
-}
+//struct MainView_Previews: PreviewProvider {
+//    @State static var selected: String? = "Nangang"
+//    @State static var mode: TransportMode = .HSR
+//
+//    static var previews: some View {
+//        MainView(selected: $selected, mode: $mode)
+//    }
+//}

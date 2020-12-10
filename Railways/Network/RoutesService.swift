@@ -14,6 +14,32 @@ public struct RoutesService {
         runRoutesRequest(client.authenticateRequest(url: "https://ptx.transportdata.tw/MOTC/v3/Bus/Route/City/Tainan?$format=JSON"), on: client, completion: completion)
     }
     
+    static func getAllStops(client: NetworkManager, completion: (([StopOfRoute]) -> Void)? = nil) {
+        runAllStopsRequest(client.authenticateRequest(url: "https://ptx.transportdata.tw/MOTC/v3/Bus/StopOfRoute/City/Tainan"), on: client, completion: completion)
+    }
+    
+    static func runAllStopsRequest(_ request: URLRequest, on client: NetworkManager, completion: (([StopOfRoute]) -> Void)? = nil) {
+        client.executeRequest(request: request) { result in
+            switch result {
+            case .success(let data):
+                print("Initial success")
+
+                let decoder = JSONDecoder()
+                do {
+                    let res = try decoder.decode(RouteStops.self, from: data)
+//                    print(welcome.routes)
+                    completion?(res.stopOfRoutes)
+                } catch {
+                    print(error.localizedDescription)
+                    print(error)
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+            
+        }
+    }
+    
     static func runRoutesRequest(_ request: URLRequest, on client: NetworkManager, completion: (([Route]) -> Void)? = nil) {
         client.executeRequest(request: request) { result in
             switch result {
@@ -23,7 +49,7 @@ public struct RoutesService {
                 let decoder = JSONDecoder()
                 do {
                     let welcome = try decoder.decode(Welcome.self, from: data)
-                    print(welcome.routes)
+//                    print(welcome.routes)
                     completion?(welcome.routes)
                 } catch {
                     print(error.localizedDescription)

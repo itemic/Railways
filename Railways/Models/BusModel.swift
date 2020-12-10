@@ -36,7 +36,7 @@ struct Route: Codable, Identifiable {
     var routeType: Int
     var serviceType: [String: Bool]
     var ticketPriceDescription, departureStopName, destinationStopName, fareBufferZoneDescription: DepartureStopName
-    var startStop, endStop: Stop
+    var startStop, endStop: TerminusStop
     var isCircular: Bool
     var routeURL, liveBusURL: String
     var routeMapImageURL: String
@@ -78,7 +78,7 @@ struct DepartureStopName: Codable {
 }
 
 // MARK: - Stop
-struct Stop: Codable {
+struct TerminusStop: Codable {
     var stopID: String
     var stopName: DepartureStopName
 
@@ -103,7 +103,7 @@ struct Operator: Codable {
     }
 }
 
-enum OpxeratorCode: String, Codable {
+enum OperatorCode: String, Codable {
     case shingNanBus = "ShingNanBus"
     case siFangBus = "SiFangBus"
     case sinyingBus = "SinyingBus"
