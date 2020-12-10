@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ModeSelectionView: View {
-    @Binding var selection: String
-    let modes = ["HSR", "TRA", "Bus", "KMRT", "LRT"]
+    @Binding var selection: TransportMode
+    let modes = [TransportMode.HSR, TransportMode.TRA, TransportMode.MRT, TransportMode.BUS]
     let columns = [
         GridItem(.adaptive(minimum: 60)),
         GridItem(.adaptive(minimum: 60))
@@ -28,23 +28,23 @@ struct ModeSelectionView: View {
 }
 
 struct ModeSelectionView_Previews: PreviewProvider {
-    @State static var selection = "Bus"
+    @State static var selection = TransportMode.BUS
     static var previews: some View {
         ModeSelectionView(selection: $selection)
     }
 }
 
 struct ModeClass: View {
-    let mode: String
+    let mode: TransportMode
     let selected: Bool
     
     var highlightColor: Color {
         switch(mode) {
-        case "TRA":
+        case .TRA:
             return .blue
-        case "HSR":
+        case .HSR:
             return .orange
-        case "Bus":
+        case .BUS:
             return .green
         default:
             return .black
@@ -53,11 +53,11 @@ struct ModeClass: View {
     
     var icon: String {
         switch(mode) {
-        case "TRA":
+        case .TRA:
             return "tram.tunnel.fill"
-        case "HSR":
+        case .HSR:
             return "tram.fill"
-        case "Bus":
+        case .BUS:
             return "bus.doubledecker.fill"
         default:
             return "bolt.horizontal.fill"
@@ -71,7 +71,7 @@ struct ModeClass: View {
                 VStack(alignment: .leading){
                     Image(systemName: icon).font(.system(size: 18))
                     Spacer()
-                    Text(mode).font(.headline)
+                    Text(mode.rawValue).font(.headline)
                 }.foregroundColor(selected ? .white : highlightColor)
                 Spacer()
             }
@@ -84,7 +84,7 @@ struct ModeClass: View {
                 VStack(alignment: .leading){
                     Image(systemName: icon).font(.system(size: 18)).foregroundColor(highlightColor)
                     Spacer()
-                    Text(mode).font(.headline)
+                    Text(mode.rawValue).font(.headline)
                 }
                 Spacer()
             }

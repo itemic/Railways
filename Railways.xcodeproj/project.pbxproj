@@ -11,6 +11,11 @@
 		4541C1C6255FD3960064BC7F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4541C1C5255FD3960064BC7F /* MainView.swift */; };
 		4541C1CB255FD4630064BC7F /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4541C1CA255FD4630064BC7F /* TestView.swift */; };
 		457513C1255FC18600969898 /* ModeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457513C0255FC18600969898 /* ModeSelectionView.swift */; };
+		4582206E258214A000B7CA45 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4582206D258214A000B7CA45 /* NetworkManager.swift */; };
+		458220742582151E00B7CA45 /* BusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458220732582151E00B7CA45 /* BusModel.swift */; };
+		4582207D2582156600B7CA45 /* RoutesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4582207C2582156600B7CA45 /* RoutesViewModel.swift */; };
+		458220822582157C00B7CA45 /* RoutesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458220812582157C00B7CA45 /* RoutesService.swift */; };
+		45822087258216A000B7CA45 /* TransportMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45822086258216A000B7CA45 /* TransportMode.swift */; };
 		45C7005D25027E7B00C605E2 /* RailwaysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7005C25027E7B00C605E2 /* RailwaysApp.swift */; };
 		45C7005F25027E7B00C605E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7005E25027E7B00C605E2 /* ContentView.swift */; };
 		45C7006125027E7C00C605E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45C7006025027E7C00C605E2 /* Assets.xcassets */; };
@@ -41,6 +46,11 @@
 		4541C1C5255FD3960064BC7F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		4541C1CA255FD4630064BC7F /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		457513C0255FC18600969898 /* ModeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSelectionView.swift; sourceTree = "<group>"; };
+		4582206D258214A000B7CA45 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		458220732582151E00B7CA45 /* BusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusModel.swift; sourceTree = "<group>"; };
+		4582207C2582156600B7CA45 /* RoutesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesViewModel.swift; sourceTree = "<group>"; };
+		458220812582157C00B7CA45 /* RoutesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesService.swift; sourceTree = "<group>"; };
+		45822086258216A000B7CA45 /* TransportMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportMode.swift; sourceTree = "<group>"; };
 		45C7005925027E7B00C605E2 /* Railways.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Railways.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45C7005C25027E7B00C605E2 /* RailwaysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailwaysApp.swift; sourceTree = "<group>"; };
 		45C7005E25027E7B00C605E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +91,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4582206C2582148F00B7CA45 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4582206D258214A000B7CA45 /* NetworkManager.swift */,
+				4582207C2582156600B7CA45 /* RoutesViewModel.swift */,
+				458220812582157C00B7CA45 /* RoutesService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		458220722582151600B7CA45 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				458220732582151E00B7CA45 /* BusModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4582207B2582153800B7CA45 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				45C7005C25027E7B00C605E2 /* RailwaysApp.swift */,
+				45C7005E25027E7B00C605E2 /* ContentView.swift */,
+				4541C1C5255FD3960064BC7F /* MainView.swift */,
+				45822086258216A000B7CA45 /* TransportMode.swift */,
+				4541C1CA255FD4630064BC7F /* TestView.swift */,
+				4541C1C0255FD09F0064BC7F /* TimelineScrollView.swift */,
+				457513C0255FC18600969898 /* ModeSelectionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		45C7005025027E7B00C605E2 = {
 			isa = PBXGroup;
 			children = (
@@ -104,12 +146,9 @@
 		45C7005B25027E7B00C605E2 /* Railways */ = {
 			isa = PBXGroup;
 			children = (
-				45C7005C25027E7B00C605E2 /* RailwaysApp.swift */,
-				45C7005E25027E7B00C605E2 /* ContentView.swift */,
-				4541C1C5255FD3960064BC7F /* MainView.swift */,
-				4541C1CA255FD4630064BC7F /* TestView.swift */,
-				4541C1C0255FD09F0064BC7F /* TimelineScrollView.swift */,
-				457513C0255FC18600969898 /* ModeSelectionView.swift */,
+				4582207B2582153800B7CA45 /* Views */,
+				458220722582151600B7CA45 /* Models */,
+				4582206C2582148F00B7CA45 /* Network */,
 				45C7006025027E7C00C605E2 /* Assets.xcassets */,
 				45C7006525027E7C00C605E2 /* Info.plist */,
 				45C7006625027E7C00C605E2 /* Railways.entitlements */,
@@ -275,8 +314,13 @@
 			files = (
 				4541C1CB255FD4630064BC7F /* TestView.swift in Sources */,
 				4541C1C1255FD09F0064BC7F /* TimelineScrollView.swift in Sources */,
+				4582207D2582156600B7CA45 /* RoutesViewModel.swift in Sources */,
 				457513C1255FC18600969898 /* ModeSelectionView.swift in Sources */,
+				4582206E258214A000B7CA45 /* NetworkManager.swift in Sources */,
+				458220742582151E00B7CA45 /* BusModel.swift in Sources */,
+				45822087258216A000B7CA45 /* TransportMode.swift in Sources */,
 				45C7005F25027E7B00C605E2 /* ContentView.swift in Sources */,
+				458220822582157C00B7CA45 /* RoutesService.swift in Sources */,
 				4541C1C6255FD3960064BC7F /* MainView.swift in Sources */,
 				45C7005D25027E7B00C605E2 /* RailwaysApp.swift in Sources */,
 			);

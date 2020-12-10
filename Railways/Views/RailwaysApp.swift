@@ -12,6 +12,7 @@ struct RailwaysApp: App {
     @State var selected: String? = "Nangang"
     
     @State var sel2: String? = "12:03"
+    
 
     var dummyTimes = ["12:03", "12:05", "12:08", "1:32",
                       "2:49", "3:39", "3:44", "4:42", "5:12",
@@ -21,7 +22,7 @@ struct RailwaysApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(selected: $selected)
+            ContentView(selected: $selected, testTextField: "String")
         }
     }
 }
